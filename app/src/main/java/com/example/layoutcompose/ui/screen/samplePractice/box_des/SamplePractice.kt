@@ -16,10 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.layoutcompose.ui.theme.bb
-import com.example.layoutcompose.ui.theme.blue
-import com.example.layoutcompose.ui.theme.green
-import com.example.layoutcompose.ui.theme.yellow
+
 
 @Composable
 fun Main_Practice(modifier: Modifier = Modifier) {
@@ -34,13 +31,13 @@ fun Main_Practice(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(120.dp)
-                .background(blue),
+                .background(Color.Blue),
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column(
                 modifier = modifier
-                    .background(blue),
+                    .background(Color.Blue),
                 verticalArrangement = Arrangement.SpaceAround,
             ) {
                 Text(
@@ -66,7 +63,7 @@ fun Main_Practice(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(120.dp)
-                .background(bb),
+                .background(Color.Blue),
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -74,7 +71,7 @@ fun Main_Practice(modifier: Modifier = Modifier) {
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxHeight()
-                    .background(yellow),
+                    .background(Color.Yellow),
                 contentAlignment =
                 Alignment.Center
             ) {
@@ -88,7 +85,7 @@ fun Main_Practice(modifier: Modifier = Modifier) {
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxHeight()
-                    .background(green),
+                    .background(Color.Green),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
