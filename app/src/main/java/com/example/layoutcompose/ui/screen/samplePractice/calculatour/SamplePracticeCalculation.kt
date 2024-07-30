@@ -62,7 +62,7 @@ fun SamplePracticeCalculation(modifier: Modifier = Modifier) {
             value = number2.toString(),
             onValueChange = { number2 = it.toInt() }
         )
-        Text(text = "resualt = ${number1- number2}")
+        Text(text = "resualt = ${number1 - number2}")
     }
 
     Row() {
