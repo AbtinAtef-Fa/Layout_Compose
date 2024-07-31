@@ -1,104 +1,101 @@
-package com.example.layoutcompose.ui.screen.samplePractice.bmi
-
-
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
-fun BMICalculatorApp(modifier: Modifier = Modifier) {
-    var w by remember { mutableStateOf("") }
-    var h by remember { mutableStateOf("") }
-    var bmiResult by remember { mutableStateOf("") }
-    Row(
+fun BMICalculatorScreen() {
+    var weightInput by remember { mutableStateOf(TextFieldValue("")) }
+    var heightInput by remember { mutableStateOf(TextFieldValue("")) }
+    var result by remember { mutableStateOf("") }
+    val bmiRecords = remember { mutableStateListOf<Pair<String, String>>() }
+
+    Column(
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(15.dp),
+            .fillMaxSize()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
-
-
-        TextField(
-            modifier = Modifier
-                .weight(1f)
-                .padding(15.dp),
-            value = w,
-            onValueChange = { w = it },
-            label = { Text(text = "vazn (kg)") },
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
-        )
+        Text(text = "BMI Calculator", fontSize = 24.sp, modifier = Modifier.padding(bottom = 16.dp))
 
         TextField(
+            value = weightInput,
+            onValueChange = { weightInput = it },
+            label = {Text(text = "weight(m)", fontWeight = FontWeight.Bold)},
             modifier = Modifier
-                .weight(1f)
-                .padding(15.dp),
-            value = h,
-            onValueChange = { h = it },
-            label = { Text(text = "gad (cm)") },
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
-        )
-    }
-    Column {
-        OutlinedButton(
-            /**
-             *chek the resualt
-             * see [and convert]
-             */
-            /**
-             *chek the resualt
-             * see [and convert]
-             */
-            onClick = {
-                val wwV = w.toDoubleOrNull()
-                val hhV = h.toDoubleOrNull()
-                if (wwV != null && hhV != null) {
-                    val bm = cal(wwV, hhV)
-                    bmiResult = "todeh :$bm"
+                .fillMaxWidth()
+                .padding(16.dp),
+            singleLine = true,
 
-                } else {
-                    bmiResult = "treu in text fild"
-                }
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        OutlinedTextField(
+            value = heightInput,
+            label = { Text(text = "height(m)", fontWeight = FontWeight.Bold) },
+
+            onValueChange = { heightInput = it },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            singleLine = true,
+
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Button(onClick = {
+            result = calculateBMI(weightInput.text, heightInput.text)
+            if (result != "Invalid Input") {
+                bmiRecords.add(Pair("${weightInput.text}kg, ${heightInput.text}m", result))
             }
-        ) {
-            Text(text = "BMI_calcuted")
+        }) {
+            Text(text = "Calculate BMI")
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text(text = "Result: $result", style = MaterialTheme.typography.bodyLarge)
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text(text = "BMI Records", fontSize = 20.sp, modifier = Modifier.padding(bottom = 8.dp))
+
+        bmiRecords.forEach { record ->
+            Text(text = "Weight & Height: ${record.first}, BMI: ${record.second}")
         }
     }
-    Text(bmiResult)
 }
 
-fun cal(we: Double, he: Double): Double {
-    val him = he / 100 * 2
-    return we / (him * him)
+fun calculateBMI(weight: String, height: String): String {
+    return try {
+        val weightValue = weight.toDouble()
+        val heightValue = height.toDouble()
+        val bmi = weightValue / (heightValue * heightValue)
+        String.format("%.2f", bmi)
+    } catch (e: NumberFormatException) {
+        "Invalid Input"
+    }
 }
 
-@Preview()
+@Preview(showBackground = true)
 @Composable
-fun BMICalculatorAppPreview() {
-    Column(
-        Modifier
-            .fillMaxSize()
-            .background(Color.White),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        BMICalculatorApp()
+fun PreviewBMICalculatorScreen() {
+    Column {
+        BMICalculatorScreen()
     }
 }
