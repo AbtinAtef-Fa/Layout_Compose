@@ -85,7 +85,7 @@ fun BMICalculatorApp(modifier: Modifier = Modifier) {
 }
 
 fun cal(we: Double, he: Double): Double {
-    val him = he / 100
+    val him = he / 100 * 2
     return we / (him * him)
 }
 
