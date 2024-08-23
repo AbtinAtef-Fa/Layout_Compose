@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e86d38da-ee06-4449-97b8-f91fb75d6ac1" name="Changes" comment="Layout_compose_update">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/layoutcompose/ui/screen/sampleLazy/SampleLazyColumn.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/layoutcompose/ui/screen/sampleLazy/SampleLazyRow.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/layoutcompose/ui/screen/sampleLazy/SampleToDoText.kt" afterDir="false" />
@@ -27,6 +28,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/LayoutCompose.app.main.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/LayoutCompose.app.unitTest.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/LayoutCompose.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/LayoutCompose.app.iml" afterDir="false" />
+>>>>>>> 37ae94e09befa2ac3078adf83550a2b93c70b6d8
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/layoutcompose/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/layoutcompose/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/layoutcompose/ui/screen/sampleButton/SumpleButton.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/layoutcompose/ui/screen/sampleButton/SumpleButton.kt" afterDir="false" />
@@ -760,6 +764,7 @@
       <option name="project" value="LOCAL" />
       <updated>1722411665726</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00019" summary="Layout_compose_update">
       <option name="closed" value="true" />
       <created>1722414088835</created>
@@ -785,6 +790,9 @@
       <updated>1722498910016</updated>
     </task>
     <option name="localTasksCounter" value="22" />
+=======
+    <option name="localTasksCounter" value="19" />
+>>>>>>> 37ae94e09befa2ac3078adf83550a2b93c70b6d8
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
