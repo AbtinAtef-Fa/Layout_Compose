@@ -5,24 +5,38 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="SampleBoxPreview">
+      <SelectionState runConfigName="Test_Ca">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="Main_Preview">
+      <SelectionState runConfigName="Teast">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-07-25T08:56:06.125803800Z">
+        <DropdownSelection timestamp="2024-08-15T06:54:39.919538100Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\abtin_mma\.android\avd\Pixel_8_API_33.avd" />
+              <DeviceId pluginId="FirebaseDirectAccess" identifier="reservation=projects/test-api-sing/deviceSessions/session-1ktdg0amvd7wi" />
+            </handle>
+            <template>
+              <DeviceId pluginId="FirebaseDirectAccess" type="TEMPLATE" identifier="model_id=java/30" />
+            </template>
+          </Target>
+        </DropdownSelection>
+        <DialogSelection />
+      </SelectionState>
+      <SelectionState runConfigName="jetPackCompose.LayoutCompose.app">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="applicati.jetPackCompose.LayoutCompose.app">
+        <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2024-08-16T15:44:49.400387500Z">
+          <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\abtin_mma\.android\avd\Pixel_8_Pro_API_33.avd" />
             </handle>
           </Target>
         </DropdownSelection>
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="Bmi_preview">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
-      <SelectionState runConfigName="Prev_Mao">
+      <SelectionState runConfigName="tt">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

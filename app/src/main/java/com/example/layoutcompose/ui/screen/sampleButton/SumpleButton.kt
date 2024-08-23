@@ -1,7 +1,6 @@
 package com.example.layoutcompose.ui.screen.sampleButton
 
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -19,9 +18,9 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
@@ -116,7 +115,7 @@ fun SumpleButtonClick(modifier: Modifier = Modifier) {
     }
     Column {
         Button(onClick = { check++ }) {
-            Text(text = "salam $check" )
+            Text(text = "salam $check")
         }
     }
 
@@ -130,7 +129,7 @@ private fun SumpleButtonPreview() {
             .fillMaxSize()
             .background(Color.White)
     ) {
-      //  SumpleButton()
+        //  SumpleButton()
         SumpleButtonClick()
     }
 }

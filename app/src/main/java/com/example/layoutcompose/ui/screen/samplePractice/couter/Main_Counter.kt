@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
@@ -49,26 +48,6 @@ fun main_Counter(modifier: Modifier = Modifier) {
                 .fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            OutlinedButton(
-                onClick = { content++ }
-            ) {
-                Text(text = "increment")
-            }
-
-            OutlinedButton(
-                onClick = { content-- }
-            ) {
-                Text(text = "falling")
-            }
-
-            OutlinedButton(
-                onClick = {
-                    input = 0
-                    content = 0
-                }
-            ) {
-                Text(text = "reset")
-            }
 
             OutlinedButton(
                 onClick = {
@@ -94,7 +73,7 @@ fun main_Counter(modifier: Modifier = Modifier) {
                 placeholder = { "enter the number" },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
 
-            )
+                )
         }
     }
 }
