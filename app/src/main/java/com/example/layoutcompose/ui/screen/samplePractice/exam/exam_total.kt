@@ -43,6 +43,7 @@ import androidx.compose.ui.unit.sp
  * 🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚🔚
  *  @since :abtin atef fa
  */
+@Preview
 @Composable
 fun MyApp_exam() {
 	// State variables
