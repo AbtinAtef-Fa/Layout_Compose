@@ -2,7 +2,7 @@
 <project version="4">
   <component name="deploymentTargetSelector">
     <selectionStates>
-      <SelectionState runConfigName="android.applicati.jetPackCompose.LayoutCompose.app~1">
+      <SelectionState runConfigName="android.applicati.jetPackCompose.LayoutCompose.app~2">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

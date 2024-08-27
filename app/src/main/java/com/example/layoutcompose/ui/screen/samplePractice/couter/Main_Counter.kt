@@ -1,3 +1,5 @@
+@file:Suppress("UNUSED_EXPRESSION")
+
 package com.example.layoutcompose.ui.screen.samplePractice.couter
 
 import androidx.compose.foundation.layout.Arrangement
@@ -13,7 +15,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -24,70 +26,66 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun main_Counter(modifier: Modifier = Modifier) {
-    var content by remember {
-        mutableStateOf(0)
-    }
-    var input by remember {
-        mutableStateOf(0)
-    }
+fun Main_Counter(modifier : Modifier = Modifier) {
+	var content by remember {
+		mutableIntStateOf(0)
+	}
+	var input by remember {
+		mutableIntStateOf(0)
+	}
 //    Context =  LocalContext.current
-    Column(
-        modifier = modifier
-            .fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(
-            text = "Count=> :  $content",
-            fontWeight = FontWeight.W700
-        )
-        Spacer(modifier = modifier.height(40.dp))
-        Row(
-            modifier
-                .fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceEvenly
-        ) {
+	Column(
+		modifier = modifier
+			.fillMaxSize() ,
+		verticalArrangement = Arrangement.Center ,
+		horizontalAlignment = Alignment.CenterHorizontally
+	) {
+		Text(
+			text = "Count=> :  $content" ,
+			fontWeight = FontWeight.W700
+		)
+		Spacer(modifier = modifier.height(40.dp))
+		Row(
+			modifier
+				.fillMaxWidth() ,
+			horizontalArrangement = Arrangement.SpaceEvenly
+		) {
 
-            OutlinedButton(
-                onClick = {
-                    content += input
-                    input = 0
-                }
-            ) {
-                Text(text = "ADD_new")
-            }
-        }
+			OutlinedButton(
+				onClick = {
+					content += input
+					input = 0
+				}
+			) {
+				Text(text = "ADD_new")
+			}
+		}
 
-        Spacer(modifier = modifier.height(20.dp))
+		Spacer(modifier = modifier.height(20.dp))
 
-        Row(
-            modifier
-                .fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceEvenly
-        ) {
-            OutlinedTextField(
-                value = input.toString(),
-                onValueChange = { input = it.toIntOrNull() ?: 0 },
-                placeholder = { "enter the number" },
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+		Row(
+			modifier
+				.fillMaxWidth() ,
+			verticalAlignment = Alignment.CenterVertically ,
+			horizontalArrangement = Arrangement.SpaceEvenly
+		) {
+			OutlinedTextField(
+				value = input.toString() ,
+				onValueChange = { input = it.toIntOrNull() ?: 0 } ,
+				placeholder = { "enter the number" } ,
+				keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number) ,
 
-                )
-        }
-    }
+				)
+		}
+	}
 }
 
-@Composable
-fun Buttons_com(modifier: Modifier = Modifier) {
-
-}
 
 @Preview(
-    showBackground = true,
-    showSystemUi = true
+	showBackground = true ,
+	showSystemUi = true
 )
 @Composable
-private fun main_Counter_preview() {
-    main_Counter()
+private fun Main_Counter_preview() {
+	Main_Counter()
 }

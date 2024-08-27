@@ -44,7 +44,7 @@ fun SampleLazyColumn(modifier: Modifier = Modifier) {
 //        }
 //    }
     var list = listOf("car", "bus", "cat", "dog", "blue", "black")
-    var dataModel:List<DataModel> = listOf(
+    val dataModel:List<DataModel> = listOf(
         DataModel("alex",22,"alex@gmail", iconCheck = Icons.Default.Build),
         DataModel("sara",22,"sara@gmail", iconCheck = Icons.Default.AccountCircle),
         DataModel("peeter",22,"peeter@gmail", iconCheck = Icons.Default.Done),

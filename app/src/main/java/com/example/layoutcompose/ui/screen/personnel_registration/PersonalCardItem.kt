@@ -17,10 +17,10 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import com.example.layoutcompose.ui.theme.Black
 
 @Composable
 fun PersonalCardItem(
-	modifier : Modifier = Modifier ,
 	item : PersonalModel
 ) {
 	CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
@@ -79,11 +79,13 @@ fun PersonalCardItem(
 
 @Composable
 fun TextItemPersonal(
-	modifier : Modifier = Modifier ,
 	text : String ,
 	data : String = " " ,
 ) {
-	Text(text = text + " " + data)
+	Text(
+		text = text + " " + data ,
+		color = Black
+	)
 }
 
 @Preview

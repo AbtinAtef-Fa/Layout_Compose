@@ -38,7 +38,7 @@ fun SampleToDoText(modifier: Modifier = Modifier) {
         mutableStateOf("")
     }
 
-    var list = remember {
+    val list = remember {
         mutableStateListOf(text)
     }
 
