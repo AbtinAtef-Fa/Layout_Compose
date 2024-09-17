@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LayoutCompose.iml" filepath="$PROJECT_DIR$/.idea/modules/LayoutCompose.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LayoutCompose.iml" filepath="$PROJECT_DIR$/.idea/LayoutCompose.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LayoutCompose.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LayoutCompose.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.applicati.jetPackCompose.LayoutCompose.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.applicati.jetPackCompose.LayoutCompose.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.applicati.jetPackCompose.LayoutCompose.app~1.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.applicati.jetPackCompose.LayoutCompose.app~1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.applicati.jetPackCompose.LayoutCompose.app~2.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.applicati.jetPackCompose.LayoutCompose.app~2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.applicati.jetPackCompose.LayoutCompose.app~2.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.applicati.jetPackCompose.LayoutCompose.app~2.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.applicati.jetPackCompose.LayoutCompose.app~2.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.applicati.jetPackCompose.LayoutCompose.app~2.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.applicati.jetPackCompose.LayoutCompose.app~2.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.applicati.jetPackCompose.LayoutCompose.app~2.unitTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/applicati.jetPackCompose.LayoutCompose.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/applicati.jetPackCompose.LayoutCompose.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/jetPackCompose.LayoutCompose.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/jetPackCompose.LayoutCompose.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LayoutCompose.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LayoutCompose.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LayoutCompose.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LayoutCompose.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LayoutCompose.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LayoutCompose.app.unitTest.iml" />
     </modules>
   </component>
 </project>

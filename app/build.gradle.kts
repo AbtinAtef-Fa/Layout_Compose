@@ -68,4 +68,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(platform("androidx.compose:compose-bom:2023.06.01"))
     implementation("androidx.compose.material:material-icons-extended")
+    implementation ("androidx.compose.material:material-icons-extended:1.6.8")
+//    bmi
+    implementation ("com.google.accompanist:accompanist-systemuicontroller:0.31.2-alpha")
 }

@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
@@ -46,9 +47,9 @@ fun PersonalCardItem(
 						.fillMaxWidth() ,
 					horizontalArrangement = Arrangement.SpaceAround
 				) {
-					TextItemPersonal(text = "نام:" , data = item.name)
-					TextItemPersonal(text = "نام خانوادگی:" , data = item.family)
-					TextItemPersonal(text = "تلفن:" , data = item.phone)
+					TextItemPersonal(text = "نام:" , data = item.name,color = Color.Black)
+					TextItemPersonal(text = "نام خانوادگی:" , data = item.family,color = Color.Black)
+					TextItemPersonal(text = "تلفن:" , data = item.phone,color = Color.Black)
 				}
 
 				Row(
@@ -56,8 +57,8 @@ fun PersonalCardItem(
 						.fillMaxWidth() ,
 					horizontalArrangement = Arrangement.SpaceAround
 				) {
-					TextItemPersonal(text = "آدرس:" , data = item.address)
-					TextItemPersonal(text = "ایمیل:" , data = item.email)
+					TextItemPersonal(text = "آدرس:" , data = item.address,color = Color.Black)
+					TextItemPersonal(text = "ایمیل:" , data = item.email,color = Color.Black)
 				}
 
 				Row(
@@ -65,9 +66,9 @@ fun PersonalCardItem(
 						.fillMaxWidth() ,
 					horizontalArrangement = Arrangement.SpaceAround
 				) {
-					TextItemPersonal(text = "code personality:" , data = item.nationalCode)
-					TextItemPersonal(text = "age:" , data = item.age.toString())
-					TextItemPersonal(text = "bankedId:" , data = item.bankdnumber.toString())
+					TextItemPersonal(text = "code personality:" , data = item.nationalCode,color = Color.Black)
+					TextItemPersonal(text = "age:" , data = item.age.toString(),color = Color.Black)
+					TextItemPersonal(text = "bankedId:" , data = item.bankdnumber,color = Color.Black)
 				}
 
 			}
@@ -81,6 +82,7 @@ fun PersonalCardItem(
 fun TextItemPersonal(
 	text : String ,
 	data : String = " " ,
+	color : Color
 ) {
 	Text(
 		text = text + " " + data ,

@@ -10,5 +10,5 @@
     <color name="red">@android:color/holo_red_light</color>
     <color name="blue">@android:color/holo_blue_light</color>
     <color name="orange">@android:color/holo_orange_dark</color>
-    <color name="blue_holo">#A37544</color>
+    <color name="blue_dialog">#1C488A</color>
 </resources>
