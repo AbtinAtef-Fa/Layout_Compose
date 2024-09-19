@@ -7,8 +7,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 
@@ -25,8 +23,7 @@ fun PersonnelRegistration(modifier : Modifier = Modifier) {
 			"ali@example.com" ,
 			"تهران" ,
 			"0441625245" ,
-			12 ,
-			"502266998"
+
 		) ,
 		PersonalModel(
 			2 ,
@@ -36,8 +33,7 @@ fun PersonnelRegistration(modifier : Modifier = Modifier) {
 			"maryam@example.com" ,
 			"اصفهان" ,
 			"001255689" ,
-			51 ,
-			"450221369"
+
 		) ,
 		PersonalModel(
 			3 ,
@@ -47,8 +43,7 @@ fun PersonnelRegistration(modifier : Modifier = Modifier) {
 			"hosein@example.com" ,
 			"شیراز" ,
 			"154786922" ,
-			32 ,
-			"555555"
+
 		) ,
 		PersonalModel(
 			4 ,
@@ -58,8 +53,7 @@ fun PersonnelRegistration(modifier : Modifier = Modifier) {
 			"abtin@example.com" ,
 			"karaj" ,
 			"0441625241" ,
-			17 ,
-			"5022175869"
+
 		) ,
 	)
 	Scaffold(

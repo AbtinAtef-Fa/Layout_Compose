@@ -27,13 +27,14 @@ import com.example.layoutcompose.R
 
 @Composable
 fun TextPersonal(modifier: Modifier = Modifier) {
+//    edit text in data
     var name by remember { mutableStateOf("") }
     var family by remember { mutableStateOf("") }
     var phone by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var address by remember { mutableStateOf("") }
     var nationalCode by remember { mutableStateOf("") }
-
+// error message
     var isValidName by remember { mutableStateOf(false) }
     var isValidFamily by remember { mutableStateOf(false) }
     var isValidPhone by remember { mutableStateOf(false) }

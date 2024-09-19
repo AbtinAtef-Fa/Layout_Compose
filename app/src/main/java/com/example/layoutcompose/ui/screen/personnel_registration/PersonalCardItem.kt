@@ -22,88 +22,93 @@ import com.example.layoutcompose.ui.theme.Black
 
 @Composable
 fun PersonalCardItem(
-	item : PersonalModel
+    item: PersonalModel
 ) {
-	CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-		ElevatedCard(
-			elevation = CardDefaults.cardElevation(
-				defaultElevation = 6.dp ,
+    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+        ElevatedCard(
+            elevation = CardDefaults.cardElevation(
+                defaultElevation = 6.dp,
 
-				) ,
-			modifier = Modifier
-				.padding(horizontal = 3.dp , vertical = 3.dp)
-				.fillMaxWidth()
-				.height(80.dp) ,
+                ),
+            modifier = Modifier
+                .padding(horizontal = 3.dp, vertical = 3.dp)
+                .fillMaxWidth()
+                .height(80.dp),
 
-			) {
-			Column(
-				modifier = Modifier
-					.padding(horizontal = 4.dp)
-					.fillMaxSize() ,
-				verticalArrangement = Arrangement.SpaceAround
-			) {
-				Row(
-					modifier = Modifier
-						.fillMaxWidth() ,
-					horizontalArrangement = Arrangement.SpaceAround
-				) {
-					TextItemPersonal(text = "نام:" , data = item.name,color = Color.Black)
-					TextItemPersonal(text = "نام خانوادگی:" , data = item.family,color = Color.Black)
-					TextItemPersonal(text = "تلفن:" , data = item.phone,color = Color.Black)
-				}
+            ) {
+            Column(
+                modifier = Modifier
+                    .padding(horizontal = 4.dp)
+                    .fillMaxSize(),
+                verticalArrangement = Arrangement.SpaceAround
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceAround
+                ) {
+                    TextItemPersonal(text = "نام:", data = item.name, color = Color.Black)
+                    TextItemPersonal(
+                        text = "نام خانوادگی:",
+                        data = item.family,
+                        color = Color.Black
+                    )
+                    TextItemPersonal(text = "تلفن:", data = item.phone, color = Color.Black)
+                }
 
-				Row(
-					modifier = Modifier
-						.fillMaxWidth() ,
-					horizontalArrangement = Arrangement.SpaceAround
-				) {
-					TextItemPersonal(text = "آدرس:" , data = item.address,color = Color.Black)
-					TextItemPersonal(text = "ایمیل:" , data = item.email,color = Color.Black)
-				}
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceAround
+                ) {
+                    TextItemPersonal(text = "آدرس:", data = item.address, color = Color.Black)
+                    TextItemPersonal(text = "ایمیل:", data = item.email, color = Color.Black)
+                }
 
-				Row(
-					modifier = Modifier
-						.fillMaxWidth() ,
-					horizontalArrangement = Arrangement.SpaceAround
-				) {
-					TextItemPersonal(text = "code personality:" , data = item.nationalCode,color = Color.Black)
-					TextItemPersonal(text = "age:" , data = item.age.toString(),color = Color.Black)
-					TextItemPersonal(text = "bankedId:" , data = item.bankdnumber,color = Color.Black)
-				}
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceAround
+                ) {
+                    TextItemPersonal(
+                        text = "کد ملی:",
+                        data = item.nationalCode,
+                        color = Color.Black
+                    )
+                }
 
-			}
-		}
-	}
+            }
+        }
+    }
 
 }
 
 
 @Composable
 fun TextItemPersonal(
-	text : String ,
-	data : String = " " ,
-	color : Color
+    text: String,
+    data: String = " ",
+    color: Color
 ) {
-	Text(
-		text = text + " " + data ,
-		color = Black
-	)
+    Text(
+        text = text + " " + data,
+        color = Black
+    )
 }
 
 @Preview
 @Composable
 private fun PersonalCardItemPreview() {
-	PersonalCardItem(
-		item = PersonalModel(
-			1 ,
-			"علی" ,
-			"احمدی" ,
-			"09123456789" ,
-			"ali@example.com" ,
-			"تهران" ,
-			"124588999" ,
-			13 ,
-			"5022532147"
-		) ,
-	)
+    PersonalCardItem(
+        item = PersonalModel(
+            1,
+            "علی",
+            "احمدی",
+            "09123456789",
+            "ali@example.com",
+            "تهران",
+            "124588999",
+
+            ),
+    )
 }

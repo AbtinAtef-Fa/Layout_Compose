@@ -109,7 +109,7 @@ fun MainCal(modifier: Modifier = Modifier) {
             }
         }
         Text(
-            result, color = Color.Green
+            result, color = Color.Red
         )
     }
 }

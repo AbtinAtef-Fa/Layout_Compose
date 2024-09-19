@@ -9,6 +9,5 @@ data class PersonalModel(
 	val address:String = "",
 	val nationalCode:String= "",
 //	new data for personality age and bank
-	val age : Int = 0,
-	val bankdnumber :String ="",
+
 )
