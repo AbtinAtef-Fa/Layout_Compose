@@ -1,4 +1,4 @@
-package com.example.layoutcompose.ui.screen.personnel_registration
+package com.example.layoutcompose.ui.screen.personnel_registration.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -12,9 +12,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Person2
-import androidx.compose.material.icons.filled.Person3
-import androidx.compose.material.icons.filled.Person4
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.Icon
@@ -49,7 +46,7 @@ fun TopBar(modifier: Modifier = Modifier) {
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Icon(
-                    imageVector = Icons.Default.Person4,
+                    imageVector = Icons.Default.Person,
                     contentDescription = "person"
                 )
                 Text(text = "ثبت اطلاعات")

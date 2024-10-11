@@ -1,4 +1,4 @@
-package com.example.layoutcompose.ui.screen.personnel_registration
+package com.example.layoutcompose.ui.screen.personnel_registration.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -18,6 +18,7 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import com.example.layoutcompose.ui.screen.personnel_registration.data.db.entity.PersonalModel
 import com.example.layoutcompose.ui.theme.Black
 
 @Composable
@@ -47,10 +48,10 @@ fun PersonalCardItem(
                         .fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceAround
                 ) {
-                    TextItemPersonal(text = "نام:", data = item.name, color = Color.Black)
+                    TextItemPersonal(text = "نام:", data = item.lastName, color = Color.Black)
                     TextItemPersonal(
                         text = "نام خانوادگی:",
-                        data = item.family,
+                        data = item.firstName,
                         color = Color.Black
                     )
                     TextItemPersonal(text = "تلفن:", data = item.phone, color = Color.Black)

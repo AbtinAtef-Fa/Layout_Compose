@@ -1,6 +1,11 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
+    kotlin("plugin.parcelize")
+
+
 }
 
 android {
@@ -50,15 +55,19 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
+//    implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.ui.android)
+    implementation(libs.androidx.material)
+//    implementation(libs.ui)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -66,9 +75,26 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation(platform("androidx.compose:compose-bom:2023.06.01"))
-    implementation("androidx.compose.material:material-icons-extended")
-    implementation ("androidx.compose.material:material-icons-extended:1.6.8")
-//    bmi
-    implementation ("com.google.accompanist:accompanist-systemuicontroller:0.31.2-alpha")
+
+
+    //hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+
+
+
+    // ViewModel utilities for Compose
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    // Lifecycle utilities for Compose
+    implementation(libs.androidx.lifecycle.runtime.compose)
+
+    //Room Db
+    implementation(libs.androidx.room.runtime)
+    // annotationProcessor(dependency.androidx.room.compiler)
+   kapt(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+
 }
